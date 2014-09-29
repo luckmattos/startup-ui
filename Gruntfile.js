@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     // Target-specific file lists and/or options go here.
-                    '.sonar/': ['dev/**/*.js']
+                    'reports/': ['dev/**/*.js']
                 }
             }
         },
@@ -140,5 +140,6 @@ grunt.registerTask('default', ['watch']);
 grunt.registerTask('build', ['uglify','imagemin','less']);
 grunt.registerTask('test', ['jshint']);
 grunt.registerTask('report', ['plato']);
+grunt.registerTask('dev', ['watch']);
 
 };
